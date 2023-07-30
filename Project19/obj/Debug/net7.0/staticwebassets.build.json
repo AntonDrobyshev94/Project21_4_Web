@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "N0rQJQA8MdDa/o26YlkuH3/Dsh44Gj9fnxjD6E2NQpE=",
+  "Source": "Project19",
+  "BasePath": "_content/Project19",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Project19\\wwwroot",
+      "Source": "Project19",
+      "ContentRoot": "F:\\C#\\Project21WebTest\\Project19\\wwwroot\\",
+      "BasePath": "_content/Project19",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "F:\\C#\\Project21WebTest\\Project19\\wwwroot\\css\\bootstrap.css",
+      "SourceId": "Project19",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\C#\\Project21WebTest\\Project19\\wwwroot\\",
+      "BasePath": "_content/Project19",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
+    },
+    {
+      "Identity": "F:\\C#\\Project21WebTest\\Project19\\wwwroot\\css\\ownStylecss.css",
+      "SourceId": "Project19",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\C#\\Project21WebTest\\Project19\\wwwroot\\",
+      "BasePath": "_content/Project19",
+      "RelativePath": "css/ownStylecss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ownStylecss.css"
+    },
+    {
+      "Identity": "F:\\C#\\Project21WebTest\\Project19\\wwwroot\\css\\stylecss.css",
+      "SourceId": "Project19",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\C#\\Project21WebTest\\Project19\\wwwroot\\",
+      "BasePath": "_content/Project19",
+      "RelativePath": "css/stylecss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\stylecss.css"
+    }
+  ]
+}

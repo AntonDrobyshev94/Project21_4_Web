@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Детали";
+    Layout = "_Layout";
+}
+
+@using Project19.Entitys;
+
+@model Contact
+
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+<link href="~/css/stylecss.css" rel="stylesheet" />
+
+<h2 style="margin-left:20px">@Model.Name</h2>
+
+<table class="table" style="font-size:20px;margin-left:20px;">
+    <tr>
+        <td>ID:</td>
+        <td>@Model.ID</td>
+    </tr>
+    <tr>
+        <td>Фамилия:</td>
+        <td>@Model.Surname</td>
+    </tr>
+    <tr>
+        <td>Имя:</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Отчество:</td>
+        <td>@Model.FatherName</td>
+    </tr>
+    <tr>
+        <td>Номер телефона:</td>
+        <td>@Model.TelephoneNumber</td>
+    </tr>
+    <tr>
+        <td>Адрес:</td>
+        <td>@Model.ResidenceAdress</td>
+    </tr>
+    <tr>
+        <td>Описание:</td>
+        <td>@Model.Description</td>
+    </tr>
+</table>

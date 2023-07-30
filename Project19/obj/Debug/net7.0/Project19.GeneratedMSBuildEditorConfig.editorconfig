@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Project19
+build_property.RootNamespace = Project19
+build_property.ProjectDir = F:\C#\Project21WebTest\Project21Web\Project19\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\C#\Project21WebTest\Project21Web\Project19
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/Account/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/Account/AdminRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZG1pblJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/MyDefault/AddContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlEZWZhdWx0XEFkZENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/MyDefault/Change.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlEZWZhdWx0XENoYW5nZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/MyDefault/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlEZWZhdWx0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/MyDefault/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlEZWZhdWx0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/Shared/Components/LogoutView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9nb3V0Vmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/C\#/Project21WebTest/Project21Web/Project19/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

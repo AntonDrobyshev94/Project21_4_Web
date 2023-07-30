@@ -1,0 +1,38 @@
+﻿@model Project19.AuthContactApp.UserLogin
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+            <h3 class="text-center">Вход</h3>
+
+            <form asp-action="Login" asp-antiforgery="true">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input type="hidden" asp-for="ReturnUrl" />
+
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input asp-for="LoginProp" placeholder="Логин" />
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <input asp-for="Password" placeholder="Пароль" />
+                    </div>
+                </div>
+
+                <div class="text-center col-xs-12">
+                    <button type="submit" style="width:200px" class="btn btn-default">Войти</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+

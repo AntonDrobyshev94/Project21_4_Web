@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Страница администратора";
+    Layout = "_Layout";
+}
+
+<link href="~/css/stylecss.css" rel="stylesheet" />
+<h2 style="font-size:50px">Страница администратора</h2>
+<h3 style="font-size:25px; margin-top:auto">Текущие роли пользователя:</h3>
+@foreach (var item in ViewBag.Role)
+{
+    <p style="font-size:20px">@item</p> //роль пользователя
+}
+
+<span style ="font-size:25px">Добавление новой роли:</span>
+<form method="post" action="~/Account/CreateNewRole">
+    <b></b>
+    <input type="text" style="font-size:20px" name="roleNameString" value="Название роли" />
+    <button type="submit" class="btn">Создать новую роль</button>
+    @if (TempData["RoleCreateMessage"] != null && TempData["IsCreate"]!=null)
+    {
+        <div class="alert @((bool)TempData["IsCreate"]? "alert-success" : "alert-danger")">@TempData["RoleCreateMessage"]</div>
+    }
+</form>
+<p></p>
+<p></p>
+
+<span style="font-size:25px">Присвоение роли пользователю:</span>
+<form method="post" action="~/Account/AddUserRole">
+    <b></b>
+    <input type="text" style="font-size:20px" name="roleNameString" value="Название роли" />
+    <input type="text" style="font-size:20px" name="userNameString" value="Имя пользователя" />
+    <button type="submit" class="btn">Присвоить роль пользователю</button>
+    
+    @if (TempData["SuccessMessage"] !=null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    else
+    {
+        @if (TempData["MessageRole"] != null && TempData["isRoleAvailable"]!=null)
+        {
+            <div class="alert @((bool)TempData["isRoleAvailable"]? "alert-success" : "alert-danger")">@TempData["MessageRole"]</div>
+        }
+
+        @if (TempData["UserMessage"] != null && TempData["isUserAvailable"]!= null)
+        {
+            <div class="alert @((bool)TempData["isUserAvailable"]? "alert-success" : "alert-danger")">@TempData["UserMessage"]</div>
+        }
+    }
+</form>
+<p></p>
+<p></p>
+
+<span style="font-size:25px">Удаление роли у пользователя:</span>
+<form method="post" action="~/Account/RemoveUserRole">
+    <b></b>
+    <input type="text" style="font-size:20px" name="roleNameString" value="Название роли" />
+    <input type="text" style="font-size:20px" name="userNameString" value="Имя пользователя" />
+    <button type="submit" class="btn">Удалить роль пользователя</button>
+
+    @if (TempData["DeleteMessage"] != null)
+    {
+        <div class="alert @((bool)TempData["isUserHaveRole"]? "alert-success" : "alert-danger")">@TempData["DeleteMessage"]</div>
+    }
+    else
+    {
+        @if (TempData["MessageDeleteRole"] != null && TempData["isRoleAvailable"]!=null)
+        {
+            <div class="alert @((bool)TempData["isRoleAvailable"]? "alert-success" : "alert-danger")">@TempData["MessageDeleteRole"]</div>
+        }
+
+        @if (TempData["UserDeleteMessage"] != null && TempData["isUserAvailable"]!=null)
+        {
+            <div class="alert @((bool)TempData["isUserAvailable"]? "alert-success" : "alert-danger")">@TempData["UserDeleteMessage"]</div>
+        }
+    }
+</form>
+<p></p>
+<h4 style="font-size:25px; margin-top:30px">Регистрация нового пользователя:</h4>
+<div class="btn" style="height:50px; text-align:center; margin-block:auto; margin-bottom:30px">
+    <a class="navbar-brand" href="/Account/AdminRegister">Зарегистрировать нового пользователя</a>
+</div>
+
+<h5 style="font-size:25px">Удаление пользователя:</h5>
+<form method="post" style="margin-bottom:30px" action="~/Account/RemoveUser">
+    <b></b>
+    <input type="text" style="font-size:20px" name="userNameString" value="Имя пользователя" />
+    <button type="submit" class="btn">Удалить пользователя</button>
+    @if (TempData["DeleteUserMessage"] != null && TempData["IsRemoveUser"]!=null)
+    {
+        <div class="alert @((bool)TempData["IsRemoveUser"]? "alert-success" : "alert-danger")">@TempData["DeleteUserMessage"]</div>
+    }
+    
+</form>
+
+<body style="margin:5px; margin-top:50px">
+<table class="table">
+    <tr class="row">
+        <td class="column">
+            <h3 class="item" style="font-size:25px">Все пользователи</h3>
+            @foreach (var user in ViewBag.AllUsers)
+            {
+                <p>@user</p>
+            }
+        </td>
+        <td class="column">
+            <p></p>
+            <p></p>
+            <h3 class="item"  style="font-size:25px">Все администраторы:</h3>
+            @foreach (var user in ViewBag.Admins)
+            {
+                <p>@user</p>
+            }
+        </td>
+    </tr>
+</table>
+</body>
+
+
+

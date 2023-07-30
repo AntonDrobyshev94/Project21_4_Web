@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav>
+        <div> @await Component.InvokeAsync("LogoutView") </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <style>
+        .container {
+            padding-top: 10px;
+        }
+        .validation-summary-errors {
+            color: #f00;
+        }
+    </style>
+</body>
+</html>

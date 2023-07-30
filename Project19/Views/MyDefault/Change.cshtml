@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Изменение";
+    Layout = "_Layout";
+}
+@using Project19.Entitys;
+@model Contact
+
+<link href="~/css/ownStylecss.css" rel="stylesheet" />
+<link href="~/css/stylecss.css" rel="stylesheet" />
+
+<body style="margin-left:20px; font-size:20px;">
+    <div>
+        <form action="~/MyDefault/ChangeDataFromViewField" method="post">
+            <label>Фамилия</label><br />
+            <input type="text" name="surname" value="@Model.Surname" /><br />
+            <label>Имя</label><br />
+            <input type="text" name="name" value="@Model.Name" /><br />
+            <label>Отчество</label><br />
+            <input type="text" name="fatherName" value="@Model.FatherName" /><br />
+            <label>Номер телефона</label><br />
+            <input type="text" name="telephoneNumber" value="@Model.TelephoneNumber" /><br />
+            <label>Адрес проживания</label><br />
+            <input type="text" name="residenceAdress" value="@Model.ResidenceAdress" /><br />
+            <label>Описание</label><br />
+            <input type="text" name="description" value="@Model.Description" /><br />
+            <p><input type="submit" style="margin-top:20px" class="btn" value="Добавить" /></p>
+        </form>
+    </div>
+    <hr />
+</body>

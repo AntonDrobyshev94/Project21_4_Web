@@ -1,0 +1,142 @@
+﻿@using Project19.Entitys
+@using Microsoft.AspNetCore.Identity
+@using Project19.AuthContactApp;
+@inject UserManager<User> userManager
+@inject RoleManager<IdentityRole> roleManager
+@using Project19.Data;
+@using Project19.Controllers;
+
+@{
+    bool isAdmin;
+    if(ContactDataApi.roleClaimValue == "Admin")
+    {
+        isAdmin = true;
+    }
+    else
+    {
+        isAdmin = false;
+    }
+}
+@{
+    ViewData["Title"] = "Контакты";
+    Layout = "_Layout";
+}
+
+<link href="~/css/ownStylecss.css" rel="stylesheet" />
+<link href="~/css/stylecss.css" rel="stylesheet" />
+
+<h1 class="fontStyle" style="text-align:center;"> Список клиентов</h1>
+<style type="text/css">
+
+</style>
+<br/>
+<table class="table" style="margin-left:20px">
+    <thead>
+        <tr style="font-size:20px">
+            <th width="50">
+                ID
+            </th>
+            <th width="200">
+                Фамилия
+            </th>
+            <th width="200">
+                Имя
+            </th>
+            <th width="200">
+                Отчество
+            </th>
+            <th width="100">
+            </th>
+            <th width="100">
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (AccountController.isAuth)
+        {
+                @if(isAdmin)
+                {
+                    @foreach (Contact contact in Model)
+                    {
+                        <tr style="font-size:20px">
+                            <td>
+                                <input type="button" class="btn" value="@contact.ID" onclick="location.href='@Url.Action("Details", "MyDefault", new { id = contact.ID})'" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => contact.Surname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => contact.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => contact.FatherName)
+                            </td>
+                            <td>
+                                <input type="button" class="btn" value="Изменить" onclick="location.href='@Url.Action("Change", "MyDefault", new { id = contact.ID})'" />
+                            </td>
+                            <td>
+                                <form action="~/MyDefault/Delete/@contact.ID" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <input type="submit" class="btn" value="Удалить">
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else //не администратор, но залогинин
+                {
+                    @foreach (Contact contact in Model)
+                    {
+                        <tr style="font-size:20px">
+                            <td>
+                                <input type="button" class="btn" value="@contact.ID" onclick="location.href='@Url.Action("Details", "MyDefault", new { id = contact.ID})'" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => contact.Surname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => contact.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => contact.FatherName)
+                            </td>
+                        </tr>
+                    }
+            }
+        }
+        else
+        {
+            @foreach (Contact contact in Model)
+            {
+                <tr style="font-size:20px">
+                    <td>
+                        <input type="button" class="btn" value="@contact.ID" onclick="location.href='@Url.Action("Details", "MyDefault", new { id = contact.ID})'" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => contact.Surname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => contact.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => contact.FatherName)
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
+
+@if (isAdmin)
+{
+    <div style="margin:50px">
+
+    </div>
+    <div class="btn pull-left" style="height:40px">
+        <a class="navbar-brand" href="/Account/AddRole">Страница администратора</a>
+    </div>
+}
+
+    

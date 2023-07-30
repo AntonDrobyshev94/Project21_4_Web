@@ -1,0 +1,17 @@
+﻿.fontStyle {
+    color: blue;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.btn {
+    background: -moz-linear-gradient(#FF0074, #FF0074, #FF0074);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#FF0074 ), to(#D0ECF4), color-stop(0.5, #5BC9E1));
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    margin-left: 20px;
+    font-size: 20px;
+}
